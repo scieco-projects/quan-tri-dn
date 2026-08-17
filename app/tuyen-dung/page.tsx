@@ -125,7 +125,7 @@ export default function TuyenDungPage() {
             ))}
           </div>
 
-          <div className="mt-10 flex items-center gap-2 text-sm">
+          <div className="mt-10 flex items-center justify-center gap-2 text-sm">
             <button className="rounded-full border border-border bg-card px-4 py-2 font-semibold text-foreground">1</button>
             <button className="rounded-full border border-transparent px-3 py-2 text-muted-foreground hover:text-foreground">2</button>
             <button className="rounded-full border border-transparent px-3 py-2 text-muted-foreground hover:text-foreground">3</button>

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, ChevronDown } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
@@ -60,14 +61,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  return (
-    <>
+    return (
+      <>
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-50 font-sans transition-all duration-300",
           isScrolled
             ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
             : "bg-transparent"
@@ -115,9 +116,11 @@ export function Navbar() {
               {/* <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
                 Đăng nhập
               </Button> */}
-              <Button className="bg-foreground text-background hover:bg-foreground/90">
-                Liên hệ
-              </Button>
+              <Link href="/lien-he">
+                <Button className="bg-foreground text-background hover:bg-foreground/90">
+                  Liên hệ
+                </Button>
+              </Link>
             </div>
 
 
@@ -160,9 +163,11 @@ export function Navbar() {
                 {/* <Button variant="outline" className="w-full justify-center bg-transparent">
                   Đăng nhập
                 </Button> */}
-                <Button className="w-full justify-center bg-foreground text-background">
-                  Liên hệ
-                </Button>
+                <Link href="/lien-he" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+                  <Button className="w-full justify-center bg-foreground text-background">
+                    Liên hệ
+                  </Button>
+                </Link>
               </div>
             </div>
           </motion.div>

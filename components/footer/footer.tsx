@@ -1,7 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Building2, Mail, MapPin, Phone, ReceiptText } from "lucide-react"
+import { ArrowRight, Building2, Mail, MapPin, Phone, ReceiptText } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Separator } from "@/components/ui/separator"
+import { Textarea } from "@/components/ui/textarea"
 
 const enterpriseSolutions = [
   "Phần mềm Quản lý nhân sự - TNM HRM",
@@ -60,7 +65,60 @@ function LinkList({ title, items }: { title: string; items: string[] }) {
 export function Footer() {
   return (
     <footer className="bg-secondary py-12 text-foreground md:py-16">
-      <div className="container mx-auto grid gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-12">
+      <section
+        id="lien-he"
+        className="relative overflow-hidden px-6 py-20 lg:px-12 lg:py-28"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 rounded-3xl bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/image.png')",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 22%, black 78%, transparent 100%)",
+          }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-black/60" />
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 rounded-3xl bg-black/25 p-8 text-primary-foreground backdrop-blur-sm md:flex-row md:items-center lg:p-12">
+          <div>
+            <h2 className="text-3xl font-bold md:text-4xl">Chúng tôi có thể giúp gì cho bạn?</h2>
+            <p className="mt-3 text-primary-foreground/75">Hãy để lại lời nhắn để đội ngũ Trí Nghĩa tư vấn giải pháp phù hợp.</p>
+            <Separator className="mt-6 bg-primary-foreground/20" />
+            <div className="mt-6 flex flex-col gap-4">
+              <div className="flex flex-col gap-1">
+                <Label htmlFor="name" className="text-primary-foreground/75">
+                  Họ và Tên
+                </Label>
+                <Input id="name" type="text" placeholder="Nhập họ và tên" className="text-foreground placeholder:text-muted-foreground" />
+              </div>
+              <div className="flex flex-col gap-1">
+                <Label htmlFor="email" className="text-primary-foreground/75">
+                  Địa chỉ Email
+                </Label>
+                <Input id="email" type="email" placeholder="Nhập email" className="text-foreground placeholder:text-muted-foreground" />
+              </div>
+              <div className="flex flex-col gap-1">
+                <Label htmlFor="phone" className="text-primary-foreground/75">
+                  Số điện thoại
+                </Label>
+                <Input id="phone" type="tel" placeholder="Nhập số điện thoại" className="text-foreground placeholder:text-muted-foreground" />
+              </div>
+              <div className="flex flex-col gap-1">
+                <Label htmlFor="message" className="text-primary-foreground/75">
+                  Lời nhắn
+                </Label>
+                <Textarea id="message" placeholder="Nhập nội dung cần tư vấn" className="text-foreground placeholder:text-muted-foreground" />
+              </div>
+              <Button variant="secondary" className="inline-flex items-center gap-2 rounded-lg">
+                Gửi lời nhắn <ArrowRight data-icon="inline-end" aria-hidden="true" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="container py-10 mx-auto grid gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-12">
         <div className="space-y-8">
           <LinkList title="GIẢI PHÁP QUẢN TRỊ DOANH NGHIỆP TOÀN DIỆN TNM" items={enterpriseSolutions} />
           <LinkList title="GIẢI PHÁP CHUYỂN ĐỔI SỐ CHO CÁC NGÀNH NGHỀ ĐẶC THÙ" items={specializedSolutions} />
@@ -96,7 +154,7 @@ export function Footer() {
           </div>
         </motion.div>
       </div>
-      <div className="container mx-auto mt-10 border-t border-border px-6 pt-6 text-sm text-muted-foreground lg:px-12">
+      <div className="container mx-auto border-t border-border px-6 pt-6 text-sm text-muted-foreground lg:px-12">
         © {new Date().getFullYear()} Trí Nghĩa Technology. All rights reserved.
       </div>
     </footer>

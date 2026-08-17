@@ -76,12 +76,12 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6 lg:px-12">
           <nav className="flex items-center justify-between h-16 lg:h-20">
-            <a href="#" className="hidden lg:flex w-32 shrink-0 items-center">
-              <Image src="/tnm-logo.png" alt="TNM Software solutions provider" width={145} height={70} className="h-auto w-32 object-contain" priority />
+            <a href="#" className="hidden lg:flex w-12 shrink-0 items-center">
+              <Image src="/logo.svg" alt="TNM Software solutions provider" width={100} height={48} className="h-auto w-12 object-contain" priority />
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex flex-1 items-center justify-between gap-5 px-8">
+            <div className="hidden lg:flex flex-1 items-center justify-left gap-10 px-8">
               {navLinks.map((link) => (
                 <div key={link.label} className="relative">
                   {link.hasDropdown ? (

@@ -129,14 +129,14 @@ export function FeatureSection() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-medium mb-4">
-Tính năng hệ thống TN EDU
+Tính năng hệ thống SCI LMS
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
             Giải pháp tổng thể cho{" "}
             <span className="text-teal">nhà trường phổ thông</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Từ quản trị dữ liệu, học tập, tài chính đến tương tác phụ huynh, TN EDU giúp nhà trường vận hành hiệu quả trên một nền tảng duy nhất.
+            Từ quản trị dữ liệu, học tập, tài chính đến tương tác phụ huynh, SCI LMS giúp nhà trường vận hành hiệu quả trên một nền tảng duy nhất.
           </p>
         </motion.div>
 

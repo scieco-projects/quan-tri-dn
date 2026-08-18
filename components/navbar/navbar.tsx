@@ -35,7 +35,7 @@ const productGroups = [
   {
     title: "GIẢI PHÁP CHUYỂN ĐỔI SỐ CHO CÁC NGÀNH NGHỀ ĐẶC THÙ",
     items: [
-      "Phần mềm Quản lý trường học - TN EDU",
+      "Phần mềm Quản lý trường học - SCI LMS",
       "Phần mềm Quản lý Bảo dưỡng, sửa chữa thiết bị",
       "Phần mềm Quản lý bán & bảo dưỡng, sửa chữa Oto - TNM AUTO",
       "Phần mềm Quản lý đào tạo - TN LMS",
@@ -113,9 +113,11 @@ export function Navbar() {
             </div>
 
             <div className="hidden lg:flex items-center gap-4">
-              {/* <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
-                Đăng nhập
-              </Button> */}
+            <Link href="/chat">
+                <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
+                  Nhắn tin
+                </Button>
+              </Link>
               <Link href="/lien-he">
                 <Button className="bg-foreground text-background hover:bg-foreground/90">
                   Liên hệ
@@ -160,9 +162,9 @@ export function Navbar() {
                 ))}
               </nav>
               <div className="flex flex-col gap-4 mt-8">
-                {/* <Button variant="outline" className="w-full justify-center bg-transparent">
-                  Đăng nhập
-                </Button> */}
+                <Button variant="outline" className="w-full justify-center bg-transparent">
+                  Nhắn tin
+                </Button>
                 <Link href="/lien-he" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
                   <Button className="w-full justify-center bg-foreground text-background">
                     Liên hệ

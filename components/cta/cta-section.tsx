@@ -31,7 +31,7 @@ export function CTASection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal/20 text-teal text-sm font-medium mb-8"
             >
               <Sparkles className="w-4 h-4" />
-              TN EDU đồng hành cùng nhà trường
+              SCI LMS đồng hành cùng nhà trường
             </motion.div>
 
             {/* Headline */}

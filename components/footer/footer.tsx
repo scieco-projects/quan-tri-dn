@@ -20,7 +20,7 @@ const enterpriseSolutions = [
 ]
 
 const specializedSolutions = [
-  "Phần mềm Quản lý trường học - TN EDU",
+  "Phần mềm Quản lý trường học - SCI LMS",
   "SẢN PHẨM QUẢN TRỊ TOÀN DIỆN DÀNH CHO DOANH NGHIỆP",
   "Phần mềm Quản lý Bảo dưỡng, sửa chữa thiết bị",
   "Phần mềm Quản lý bán & bảo dưỡng, sửa chữa Ôtô - TNM AUTO",

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 
 import './globals.css'
+import ChatbotWidget from '@/components/chatbot/chatbot-widget'
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
@@ -14,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'TN EDU | Phần mềm quản lý trường học',
-  description: 'TN EDU cung cấp giải pháp quản lý trường học toàn diện, số hóa công tác quản lý, giảng dạy và kết nối nhà trường với phụ huynh học sinh.',
+  title: 'SCI LMS | Phần mềm quản lý trường học',
+  description: 'SCI LMS cung cấp giải pháp quản lý trường học toàn diện, số hóa công tác quản lý, giảng dạy và kết nối nhà trường với phụ huynh học sinh.',
   generator: 'v0.app',
   keywords: ['data infrastructure', 'real-time analytics', 'data pipelines', 'event streaming', 'data engineering'],
   openGraph: {
@@ -37,7 +38,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className="bg-background">
-      <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>{children}</body>
+      <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        {children}
+        <ChatbotWidget />
+      </body>
     </html>
   )
 }

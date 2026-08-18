@@ -15,7 +15,7 @@ const testimonials = [
   {
     quote: "Ủng hộ, và đồng hành là tôn chỉ của tôi trong nền tảng giáo dục.",
     author: "Nguyễn Thị Huệ",
-    role: "Giáo viên tại TN EDU",
+    role: "Giáo viên tại SCI LMS",
     avatar: "MRS",
     color: "bg-coral",
   },
@@ -50,14 +50,14 @@ export function TestimonialsSection() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-medium mb-4">
-TN EDU đồng hành cùng nhà trường
+SCI LMS đồng hành cùng nhà trường
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
             Hiệu quả cho{" "}
             <span className="text-teal">mọi đối tượng sử dụng</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            TN EDU mang lại lợi ích thiết thực cho nhà trường, cán bộ giáo viên và phụ huynh học sinh.
+            SCI LMS mang lại lợi ích thiết thực cho nhà trường, cán bộ giáo viên và phụ huynh học sinh.
           </p>
         </motion.div>
 

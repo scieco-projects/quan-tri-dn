@@ -140,7 +140,7 @@ export function HeroSection() {
                     textShadow: "0 0 40px hsl(174 62% 56% / 0.3)",
                   }}
                 >
-                  TN EDU
+                  SCI LMS
                 </span>
                 {/* Underline highlight */}
                 <motion.span
@@ -161,7 +161,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              TN EDU số hóa công tác quản lý, giảng dạy và kết nối nhà trường – giáo viên – phụ huynh trên một nền tảng hiện đại, thuận tiện và toàn diện.
+              SCI LMS số hóa công tác quản lý, giảng dạy và kết nối nhà trường – giáo viên – phụ huynh trên một nền tảng hiện đại, thuận tiện và toàn diện.
             </motion.p>
 
             {/* CTAs */}

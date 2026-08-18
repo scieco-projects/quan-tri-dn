@@ -1,7 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { ArrowRight, Building2, Mail, MapPin, Phone, ReceiptText } from "lucide-react"
+
+const logoBlurDataURL =
+  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2VlZjdmNiIvPjwvc3ZnPg=="
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -133,14 +137,26 @@ export function Footer() {
           className="self-start rounded-[28px] bg-card p-8 shadow-sm md:p-10"
         >
           <div className="mb-6 flex items-center gap-3">
-            <div className="flex items-center gap-1 text-4xl font-black italic tracking-tighter">
-              <span className="text-primary">T</span><span className="text-accent">N</span>
+            <div className="relative h-12 w-12 shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Logo Trí Nghĩa Technology"
+                fill
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={logoBlurDataURL}
+                sizes="48px"
+                className="object-contain"
+              />
             </div>
             <span className="text-xs font-semibold uppercase leading-tight text-muted-foreground">Software solutions provider</span>
           </div>
           <h3 className="mb-5 text-base font-bold">PHẦN MỀM QUẢN TRỊ DOANH NGHIỆP</h3>
+          <p className="mb-4 text-[15px] leading-6 text-foreground">
+            Công ty TNHH Công nghệ, Thương mại và Dịch vụ Trí Nghĩa (TNT) là đơn vị chuyên cung cấp giải pháp số hóa và chuyển đổi số toàn diện, giúp doanh nghiệp và tổ chức nâng cao hiệu quả vận hành, tối ưu quy trình và tiết kiệm chi phí trong dài hạn.
+          </p>
           <p className="mb-7 text-[15px] leading-6 text-foreground">
-            Công ty TNHH Công nghệ, Thương mại và Dịch vụ Trí Nghĩa (TNT) - Chuyên cung cấp giải pháp số hóa, chuyển đổi số giúp doanh nghiệp nâng cao hiệu quả và tiết kiệm chi phí.
+            Với đội ngũ giàu kinh nghiệm cùng hệ sinh thái sản phẩm quản trị doanh nghiệp và các giải pháp chuyên ngành, chúng tôi đồng hành cùng khách hàng từ khâu tư vấn, triển khai đến vận hành, đảm bảo mỗi giải pháp đều bám sát nhu cầu thực tế và mang lại giá trị bền vững.
           </p>
           <div className="space-y-4">
             {contactItems.map(({ icon: Icon, text }) => (

@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { BrainCircuit, Sparkles, Target, BarChart3 } from "lucide-react"
 
 const channelImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pOWzB4rkfwtyPYIp94xKi9iMDTEr0f.png"
 const introImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-asHXBwt59ihwBLBqi7e5HzQw96Qqag.png"
@@ -11,13 +10,6 @@ const benefits = [
   "Giúp phụ huynh đồng hành cùng quá trình học tập, sinh hoạt và sự phát triển của con",
 ]
 
-const aiFeatures = [
-  { icon: BrainCircuit, title: "Trợ giảng AI 24/7", text: "Trợ lý học tập giải đáp câu hỏi theo nội dung môn học, gợi ý từng bước và chuyển các vấn đề cần hỗ trợ sâu hơn đến giáo viên." },
-  { icon: Target, title: "Cá nhân hóa lộ trình", text: "Phân tích kết quả, tốc độ hoàn thành và lỗi thường gặp để đề xuất bài tập vừa sức, giúp mỗi học sinh tiến bộ theo nhịp riêng." },
-  { icon: Sparkles, title: "Tạo học liệu nhanh", text: "Giáo viên có thể tạo dàn ý bài giảng, câu hỏi kiểm tra, phiếu học tập và nội dung ôn luyện từ mục tiêu dạy học đã chọn." },
-  { icon: BarChart3, title: "Cảnh báo sớm", text: "Tổng hợp dữ liệu học tập từ xa để nhận diện học sinh có dấu hiệu giảm tương tác, chậm tiến độ hoặc cần được kết nối với gia đình." },
-]
-
 function LazyImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
   return <Image src={src} alt={alt} fill loading="lazy" placeholder="blur" blurDataURL={blurDataURL} sizes="(max-width: 768px) 100vw, 50vw" className={className} />
 }
@@ -27,8 +19,8 @@ export function SciLmsIntro() {
     <section className="relative overflow-hidden py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="mx-auto mb-16 max-w-4xl text-center">
-          <p className="mb-5 text-base font-semibold uppercase tracking-[0.22em] text-teal">SCI LMS / GIỚI THIỆU</p>
-          <h1 className="text-balance text-5xl font-bold leading-[1.08] text-foreground md:text-7xl lg:text-8xl">Giới thiệu về SCI LMS</h1>
+          <p className="mb-5 text-base font-semibold uppercase tracking-[0.22em] text-teal">Xin trân trọng giới thiệu</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">SCI LMS</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">Phần mềm học trực tuyến – SCI LMS cung cấp giải pháp học tập cho các nhu cầu từ xa</p>
         </div>
 
@@ -77,14 +69,34 @@ export function AiTeachingSection() {
   return (
     <section className="relative overflow-hidden bg-foreground py-20 text-background lg:py-28">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-          <div><p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">SCI LMS AI Learning Studio</p><h2 className="text-balance text-3xl font-bold md:text-5xl">AI biến lớp học từ xa thành trải nghiệm chủ động</h2></div>
-          <p className="max-w-2xl text-base leading-8 text-background/70">AI không thay thế giáo viên. AI giúp giáo viên có thêm thời gian cho tương tác sâu, giúp học sinh được hỗ trợ đúng lúc và giúp nhà trường nhìn thấy những tín hiệu quan trọng trong hành trình học tập.</p>
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-gold">SCI LMS AI Learning Studio</p>
+          <h2 className="text-balance text-3xl font-bold md:text-5xl">AI đồng hành cùng giáo viên và học sinh trong từng giờ học</h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-background/70">AI trong SCI LMS được thiết kế để hỗ trợ những khoảnh khắc quan trọng nhất của lớp học từ xa: giúp thầy cô chuyển hóa tri thức thành nội dung trực quan, đồng thời tạo ra một người bạn học tập luôn sẵn sàng lắng nghe và phản hồi.</p>
         </div>
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {aiFeatures.map(({ icon: Icon, title, text }, index) => <article key={title} className="rounded-2xl border border-background/15 bg-background/5 p-6 transition hover:-translate-y-1 hover:bg-background/10"><div className="flex size-11 items-center justify-center rounded-xl bg-gold/15 text-gold"><Icon className="size-5" aria-hidden="true" /></div><p className="mt-8 text-xs font-semibold uppercase tracking-widest text-background/45">0{index + 1}</p><h3 className="mt-2 text-lg font-semibold">{title}</h3><p className="mt-3 text-sm leading-7 text-background/65">{text}</p></article>)}
+        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+          <article className="overflow-hidden rounded-3xl border border-background/15 bg-background/5 transition hover:-translate-y-1 hover:bg-background/10">
+            <div className="relative aspect-[16/9] bg-background/10"><LazyImage src="/images/ai-lesson-video.png" alt="AI chuyển nội dung bài giảng thành video học tập" className="object-cover" /></div>
+            <div className="p-7 lg:p-8">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold">01 · AI tạo video bài giảng</p>
+              <h3 className="mt-3 text-2xl font-semibold">Biến nội dung của thầy cô thành bài học trực quan</h3>
+              <p className="mt-4 text-sm leading-7 text-background/70">Giáo viên chỉ cần cung cấp đề cương, slide, giáo án hoặc nội dung bài giảng đã chuẩn bị. SCI LMS AI có thể phân tích cấu trúc kiến thức, đề xuất kịch bản trình bày, chia bài thành các đoạn ngắn và tạo video học tập dễ theo dõi.</p>
+              <p className="mt-3 text-sm leading-7 text-background/70">Video có thể kết hợp lời dẫn, hình ảnh minh họa, tiêu đề chương mục và câu hỏi dừng tương tác. Thầy cô vẫn là người duyệt nội dung cuối cùng, chỉnh sửa giọng điệu và bổ sung ví dụ thực tế trước khi xuất bản cho lớp học.</p>
+              <div className="mt-6 flex flex-wrap gap-3 text-xs text-background/70"><span className="rounded-full border border-background/15 px-3 py-2">Từ giáo án đến video</span><span className="rounded-full border border-background/15 px-3 py-2">Giáo viên kiểm duyệt</span><span className="rounded-full border border-background/15 px-3 py-2">Học mọi lúc</span></div>
+            </div>
+          </article>
+          <article className="overflow-hidden rounded-3xl border border-background/15 bg-background/5 transition hover:-translate-y-1 hover:bg-background/10">
+            <div className="relative aspect-[16/9] bg-background/10"><LazyImage src="/images/ai-live-tutor.png" alt="AI tương tác với học sinh trong lúc học trực tuyến" className="object-cover" /></div>
+            <div className="p-7 lg:p-8">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold">02 · AI tương tác trong lúc học</p>
+              <h3 className="mt-3 text-2xl font-semibold">Đặt câu hỏi, nhận gợi ý và học theo cách chủ động</h3>
+              <p className="mt-4 text-sm leading-7 text-background/70">Trong khi xem video hoặc đọc tài liệu, học sinh có thể hỏi AI về khái niệm chưa hiểu, yêu cầu giải thích lại bằng cách đơn giản hơn hoặc xin một ví dụ gần gũi. AI trả lời dựa trên nội dung bài học và khuyến khích học sinh tự suy luận thay vì đưa đáp án ngay lập tức.</p>
+              <p className="mt-3 text-sm leading-7 text-background/70">AI cũng có thể đặt câu hỏi kiểm tra nhanh, nhận xét câu trả lời và gợi ý bước tiếp theo. Lịch sử tương tác được lưu trong tiến trình học tập để giáo viên biết học sinh đang vướng ở đâu và tiếp tục hỗ trợ bằng sự thấu hiểu của người dạy.</p>
+              <div className="mt-6 flex flex-wrap gap-3 text-xs text-background/70"><span className="rounded-full border border-background/15 px-3 py-2">Hỏi đáp theo bài học</span><span className="rounded-full border border-background/15 px-3 py-2">Gợi ý từng bước</span><span className="rounded-full border border-background/15 px-3 py-2">Phản hồi tức thì</span></div>
+            </div>
+          </article>
         </div>
-        <div className="mt-10 flex flex-wrap gap-3 text-sm text-background/70"><span className="rounded-full border border-background/15 px-4 py-2">Có kiểm soát của giáo viên</span><span className="rounded-full border border-background/15 px-4 py-2">Dữ liệu theo vai trò</span><span className="rounded-full border border-background/15 px-4 py-2">Học tập lấy học sinh làm trung tâm</span></div>
+        <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-7 text-background/55">SCI LMS giữ giáo viên ở vị trí trung tâm: AI hỗ trợ tạo nội dung và mở rộng tương tác, còn mục tiêu, phương pháp và quyết định giáo dục luôn thuộc về nhà trường và thầy cô.</p>
       </div>
     </section>
   )

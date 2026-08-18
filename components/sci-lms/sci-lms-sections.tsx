@@ -237,6 +237,9 @@ export function AiTeachingSection() {
               className="pointer-events-none h-full w-full object-cover"
             />
           </div>
+          <div className="relative order-2 aspect-video overflow-hidden rounded-3xl border border-background/15 bg-background/10 shadow-2xl shadow-black/40 lg:order-1">
+            <LazyImage src={workflowImage} alt="Sơ đồ luồng tương tác giữa học sinh và AI trong lúc học" className="object-cover" />
+          </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-gold">01 · AI tạo video bài giảng</p>
             <h3 className="mt-3 text-2xl font-semibold md:text-3xl">Biến nội dung của thầy cô <br/> thành bài học trực quan</h3>
@@ -260,7 +263,7 @@ export function AiTeachingSection() {
             <div className="mt-7 flex flex-wrap gap-3 text-xs text-background/70"><span className="rounded-full border border-background/15 px-3 py-2">Hỏi đáp theo bài học</span><span className="rounded-full border border-background/15 px-3 py-2">Gợi ý từng bước</span><span className="rounded-full border border-background/15 px-3 py-2">Phản hồi tức thì</span></div>
           </div>
           <div className="relative order-2 aspect-video overflow-hidden rounded-3xl border border-background/15 bg-background/10 shadow-2xl shadow-black/40 lg:order-1">
-            <LazyImage src={workflowImage} alt="Sơ đồ luồng tương tác giữa học sinh và AI trong lúc học" className="object-cover" />
+            <LazyImage src={"/ai-call.png"} alt="Sơ đồ luồng tương tác giữa học sinh và AI trong lúc học" className="object-cover" />
           </div>
         </div>
         <div className="container mx-auto px-6 lg:px-12">

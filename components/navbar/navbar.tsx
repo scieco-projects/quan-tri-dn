@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
@@ -15,42 +15,11 @@ const navLinks = [
   { label: "FRAMEWORK", href: "#framework" },
   { label: "GIẢI PHÁP", href: "#giai-phap" },
   { label: "ĐỒNG HÀNH", href: "#dong-hanh" },
-  { label: "SẢN PHẨM", href: "#san-pham", hasDropdown: true },
-]
-
-const productGroups = [
-  {
-    title: "GIẢI PHÁP QUẢN TRỊ DOANH NGHIỆP TOÀN DIỆN TNM",
-    items: [
-      "Phần mềm Quản lý nhân sự - TNM HRM",
-      "Phần mềm Quản trị Khách hàng - TNM CRM",
-      "Phần mềm Quản lý Bán hàng - TNM SO",
-      "Phần mềm Quản lý Mua hàng - TNM PO",
-      "Phần mềm Quản lý Kho - TNM WMS",
-      "Phần mềm Quản lý Sản xuất - TNM MES",
-      "Phần mềm Quản lý Tài chính - TNM FIN",
-      "Phần mềm Quản lý Dự án - TNM PM",
-    ],
-  },
-  {
-    title: "GIẢI PHÁP CHUYỂN ĐỔI SỐ CHO CÁC NGÀNH NGHỀ ĐẶC THÙ",
-    items: [
-      "Phần mềm Quản lý trường học - SCI LMS",
-      "Phần mềm Quản lý Bảo dưỡng, sửa chữa thiết bị",
-      "Phần mềm Quản lý bán & bảo dưỡng, sửa chữa Oto - TNM AUTO",
-      "Phần mềm Quản lý đào tạo - TN LMS",
-      "Phần mềm Quản lý thành viên bán hàng theo chuỗi",
-      "Phần mềm Quản lý bán lẻ điện, nước sạch - CYBER TNM",
-      "Phần mềm Quản lý kiểm định chất lượng đại học",
-      "Phần mềm Quản lý tour du lịch - TNM TOUR",
-    ],
-  },
 ]
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isProductsOpen, setIsProductsOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,30 +53,7 @@ export function Navbar() {
             <div className="hidden lg:flex flex-1 items-center justify-left gap-10 px-8">
               {navLinks.map((link) => (
                 <div key={link.label} className="relative">
-                  {link.hasDropdown ? (
-                    <button
-                      type="button"
-                      onClick={() => setIsProductsOpen(!isProductsOpen)}
-                      className="flex items-center gap-1 whitespace-nowrap text-sm font-semibold text-foreground hover:text-primary transition-colors"
-                    >
-                      {link.label}<ChevronDown className="h-4 w-4" aria-hidden="true" />
-                    </button>
-                  ) : (
-                    <a href={link.href} className="flex items-center whitespace-nowrap text-sm font-semibold text-foreground hover:text-primary transition-colors">{link.label}</a>
-                  )}
-
-                  {link.hasDropdown && isProductsOpen && (
-                    <div className="fixed left-1/2 top-20 z-50 w-[min(1190px,calc(100vw-32px))] -translate-x-1/2 overflow-hidden rounded-t-3xl bg-background shadow-2xl ring-1 ring-border">
-                      {productGroups.map((group) => (
-                        <section key={group.title} className="border-b border-border last:border-0">
-                          <h3 className="bg-muted px-5 py-3 text-base font-bold text-foreground">{group.title}</h3>
-                          <div className="grid grid-cols-2 gap-x-10 gap-y-4 px-5 py-4">
-                            {group.items.map((item) => <a key={item} href="#san-pham" className="text-sm text-foreground hover:text-primary">{item}</a>)}
-                          </div>
-                        </section>
-                      ))}
-                    </div>
-                  )}
+                  <a href={link.href} className="flex items-center whitespace-nowrap text-sm font-semibold text-foreground hover:text-primary transition-colors">{link.label}</a>
                 </div>
               ))}
             </div>

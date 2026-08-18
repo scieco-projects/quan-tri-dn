@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="vi" className="bg-background">
+    <html lang="vi" className="scroll-smooth bg-background">
       <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         {children}
         <ChatbotWidget />

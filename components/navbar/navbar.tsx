@@ -9,13 +9,13 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "TRANG CHỦ", href: "/" },
-  { label: "GIỚI THIỆU", href: "/gioi-thieu" },
+  { label: "TRANG CHỦ", href: "#top" },
+  { label: "GIỚI THIỆU", href: "#gioi-thieu" },
+  { label: "TÍNH NĂNG", href: "#tinh-nang" },
+  { label: "FRAMEWORK", href: "#framework" },
+  { label: "GIẢI PHÁP", href: "#giai-phap" },
+  { label: "ĐỒNG HÀNH", href: "#dong-hanh" },
   { label: "SẢN PHẨM", href: "#san-pham", hasDropdown: true },
-  { label: "DỊCH VỤ", href: "/dich-vu" },
-  { label: "CÂU CHUYỆN CHUYỂN ĐỔI SỐ", href: "/cau-chuyen-chuyen-doi-so" },
-  { label: "TIN TỨC", href: "/tin-tuc" },
-  { label: "TUYỂN DỤNG", href: "/tuyen-dung" },
 ]
 
 const productGroups = [

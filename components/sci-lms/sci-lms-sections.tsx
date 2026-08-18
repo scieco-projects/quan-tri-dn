@@ -64,6 +64,151 @@ export function SciLmsIntro() {
   )
 }
 
+const featureGroups = [
+  {
+    title: "Quản trị dữ liệu hệ thống",
+    subtitle: "Ứng dụng Web quản trị",
+    items: [
+      "Quản lý Người dùng",
+      "Quản lý Năm học",
+      "Quản lý Khối học",
+      "Quản lý Lớp học",
+      "Quản lý Môn học",
+      "Quản lý Thông tin học sinh",
+      "Quản lý Thời khoá biểu",
+      "Quản lý Điểm số học sinh",
+      "Quản lý Tổ/nhóm giáo viên",
+      "Quản lý Thông tin giáo viên",
+      "QL Câu lạc bộ/Kỹ năng sống",
+      "Quản lý Học phí",
+      "Quản lý Thông tin tuyến xe",
+      "Quản lý Danh sách món ăn",
+      "Quản lý Thực đơn tuần",
+      "Quản lý Thông tin phản hồi",
+      "Quản lý Tin tức, sự kiện",
+      "Báo cáo",
+    ],
+  },
+  {
+    title: "Ứng dụng di động dành cho Phụ huynh",
+    subtitle: "Mobile cho phụ huynh học sinh",
+    items: [
+      "Theo dõi Điểm danh",
+      "Xin nghỉ phép cho học sinh",
+      "Theo dõi lịch học hàng ngày",
+      "Theo dõi thực đơn hàng ngày",
+      "Theo dõi hoạt động các CLB",
+      "Theo dõi lịch lớp kỹ năng sống",
+      "Theo dõi Y tế & Tâm lý",
+      "Thông tin Xe đưa đón",
+      "Thông báo Học phí",
+      "Tương tác ý kiến cho GVCN & BGH",
+      "Nhận xét Hàng ngày",
+      "Thông báo, Sự kiện",
+    ],
+  },
+  {
+    title: "Ứng dụng di động dành cho Giáo viên",
+    subtitle: "Web và Mobile cho đội ngũ",
+    items: [
+      "Lập kế hoạch Giảng dạy",
+      "Cập nhật báo giảng hàng ngày",
+      "Cập nhật Sổ ghi đầu bài",
+      "Cập nhật Đăng ký lớp học",
+      "Quản lý Giáo án",
+      "Quản lý các Sổ chuyên môn",
+      "Đề xuất Nghỉ phép",
+      "Nhận xét cho học sinh",
+    ],
+  },
+]
+
+const advantages = [
+  {
+    audience: "Đối với nhà trường",
+    points: [
+      "Nâng cao hiệu quả quản lý, giảm chi phí nhân sự, giảm chi phí tin nhắn SMS",
+      "Số hóa toàn bộ công tác quản lý trường học: thông tin học sinh, giáo viên, nhân viên, tuyến xe, tài chính",
+      "Thuận tiện tương tác và trao đổi thông tin hai chiều giữa nhà trường – giáo viên – phụ huynh",
+      "Quản lý tài chính: học phí, tiền ăn bán trú, tiền đưa đón, CLB kỹ năng,…",
+      "Ban giám hiệu nắm bắt công việc mọi lúc mọi nơi, tiết kiệm thời gian báo cáo từ cấp dưới",
+      "Cung cấp báo cáo phân tích đa chiều",
+    ],
+  },
+  {
+    audience: "Đối với cán bộ, giáo viên",
+    points: [
+      "Tiết kiệm thời gian quản lý lớp, quản lý học sinh",
+      "Quản lý lớp học dễ dàng: Chuyên cần, Điểm, Trao đổi, Y tế, Tâm lý …",
+      "Tương tác với phụ huynh nhanh chóng: trao đổi, thông báo, nhắn tin",
+      "Tiết kiệm thời gian xử lý công việc",
+      "Cung cấp báo cáo phân tích đa chiều",
+    ],
+  },
+  {
+    audience: "Đối với phụ huynh",
+    points: [
+      "Phụ huynh có đầy đủ thông tin về quá trình học tập và rèn luyện của con",
+      "Thuận tiện tương tác, trao đổi thông tin với giáo viên và nhà trường",
+      "Cập nhật toàn bộ hoạt động học tập, tình trạng sức khỏe, tâm lý của học sinh tại trường",
+      "Cập nhật các tin tức, sự kiện từ nhà trường nhanh chóng",
+    ],
+  },
+]
+
+export function SystemFeaturesSection() {
+  return (
+    <section id="giai-phap" className="relative scroll-mt-24 overflow-hidden py-20 lg:py-28">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-teal">Tính năng hệ thống SCI LMS</p>
+          <h2 className="text-balance text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">Giải pháp tổng thể cho quản lý nhà trường phổ thông</h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">SCI LMS cung cấp bộ tính năng đầy đủ cho từng vai trò — từ quản trị dữ liệu tập trung đến ứng dụng di động dành cho phụ huynh và giáo viên.</p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-3">
+          {featureGroups.map((group) => (
+            <div key={group.title} className="flex flex-col rounded-3xl border border-border bg-card p-8 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal">{group.subtitle}</p>
+              <h3 className="mt-3 text-xl font-bold text-foreground">{group.title}</h3>
+              <ul className="mt-6 space-y-3">
+                {group.items.map((item) => (
+                  <li key={item} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                    <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-teal/15 text-xs text-teal" aria-hidden="true">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div id="dong-hanh" className="mx-auto mb-12 mt-24 max-w-3xl scroll-mt-24 text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-teal">Ưu điểm nổi bật</p>
+          <h2 className="text-balance text-3xl font-bold text-foreground md:text-4xl">SCI LMS đồng hành cùng nhà trường &amp; phụ huynh</h2>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-3">
+          {advantages.map((group) => (
+            <div key={group.audience} className="flex flex-col rounded-3xl bg-muted p-8">
+              <h3 className="text-lg font-bold text-foreground">{group.audience}</h3>
+              <div className="mt-3 h-1 w-12 rounded-full bg-coral/60" aria-hidden="true" />
+              <ul className="mt-6 space-y-4">
+                {group.points.map((point) => (
+                  <li key={point} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                    <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-coral/15 text-xs text-coral" aria-hidden="true">✓</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export function AiTeachingSection() {
   return (
     <div className="bg-foreground text-background">

@@ -5,10 +5,6 @@ import {
   ChartNoAxesCombined,
   Check,
   GraduationCap,
-  Layers3,
-  MessageCircle,
-  Network,
-  ShieldCheck,
   Sparkles,
   UsersRound,
 } from "lucide-react"
@@ -19,12 +15,12 @@ const referenceImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/
 const platformImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-3EGsCRk7oaGc2eSUCppluv9N8Ta3Gh.png"
 
 const solutions = [
-  { icon: Network, title: "Quản trị dữ liệu hệ thống", text: "Quản lý tập trung người dùng, năm học, khối lớp, môn học, học sinh và giáo viên trên một nền tảng thống nhất.", label: "Toàn diện", detail: "dữ liệu nhà trường", tone: "teal" },
-  { icon: ShieldCheck, title: "Kết nối nhà trường – phụ huynh", text: "Cập nhật thông tin, thông báo và tương tác đa chiều nhanh chóng giữa ban giám hiệu, giáo viên và phụ huynh.", label: "3 bên", detail: "cùng đồng hành", tone: "coral" },
-  { icon: ChartNoAxesCombined, title: "Quản lý học tập", text: "Theo dõi thời khóa biểu, điểm số, điểm danh, nhận xét hàng ngày và quá trình rèn luyện của học sinh.", label: "360°", detail: "góc nhìn học sinh", tone: "gold" },
-  { icon: Layers3, title: "Ứng dụng đa nền tảng", text: "Web quản trị cho nhà trường và ứng dụng Mobile thuận tiện cho giáo viên, nhân viên, phụ huynh.", label: "Web + App", detail: "truy cập linh hoạt", tone: "teal" },
-  { icon: MessageCircle, title: "Tài chính và dịch vụ học sinh", text: "Quản lý học phí, tiền ăn bán trú, tuyến xe, thực đơn, câu lạc bộ và các dịch vụ hỗ trợ học sinh.", label: "Minh bạch", detail: "vận hành hiệu quả", tone: "coral" },
-  { icon: ChartNoAxesCombined, title: "Báo cáo và điều hành", text: "Ban giám hiệu nắm bắt công việc mọi lúc mọi nơi với báo cáo phân tích đa chiều và thông tin tức thời.", label: "24/7", detail: "nắm bắt thông tin", tone: "gold" },
+  { image: "/images/solution-data.png", title: "Quản trị dữ liệu hệ thống", text: "SCI LMS tập trung toàn bộ hồ sơ người dùng, năm học, khối lớp, môn học, học sinh và giáo viên trong một cấu trúc dữ liệu thống nhất. Nhà trường giảm thao tác nhập liệu lặp lại, kiểm soát phân quyền rõ ràng và luôn có thông tin chính xác để vận hành.", label: "Toàn diện", detail: "dữ liệu nhà trường", tone: "teal", alt: "Minh họa quản trị dữ liệu nhà trường" },
+  { image: "/images/solution-connection.png", title: "Kết nối nhà trường – phụ huynh", text: "Thông báo, lịch học, nhận xét và các trao đổi quan trọng được truyền tải nhanh chóng đến đúng người. Giáo viên, ban giám hiệu và phụ huynh cùng nhìn thấy tiến trình của học sinh để phối hợp hỗ trợ kịp thời.", label: "3 bên", detail: "cùng đồng hành", tone: "coral", alt: "Minh họa kết nối nhà trường và phụ huynh" },
+  { image: "/images/solution-learning.png", title: "Quản lý học tập", text: "Theo dõi thời khóa biểu, điểm số, điểm danh, nhận xét hàng ngày và quá trình rèn luyện của học sinh trên cùng một luồng thông tin. Giáo viên dễ dàng giao nhiệm vụ, cập nhật kết quả và nhận diện nhu cầu hỗ trợ riêng của từng em.", label: "360°", detail: "góc nhìn học sinh", tone: "gold", alt: "Minh họa quản lý tiến trình học tập" },
+  { image: "/images/solution-platform.png", title: "Ứng dụng đa nền tảng", text: "Web quản trị dành cho nhà trường kết hợp cùng ứng dụng Mobile tiện lợi cho giáo viên, nhân viên và phụ huynh. Người dùng có thể truy cập thông tin, xử lý công việc và cập nhật hoạt động học tập linh hoạt trên nhiều thiết bị.", label: "Web + App", detail: "truy cập linh hoạt", tone: "teal", alt: "Minh họa ứng dụng web và mobile" },
+  { image: "/images/solution-services.png", title: "Tài chính và dịch vụ học sinh", text: "Quản lý học phí, tiền ăn bán trú, tuyến xe, thực đơn, câu lạc bộ và các dịch vụ hỗ trợ học sinh theo quy trình minh bạch. Dữ liệu thu–chi và trạng thái sử dụng được cập nhật rõ ràng, giúp nhà trường phục vụ gia đình chủ động hơn.", label: "Minh bạch", detail: "vận hành hiệu quả", tone: "coral", alt: "Minh họa tài chính và dịch vụ học sinh" },
+  { image: "/images/solution-reporting.png", title: "Báo cáo và điều hành", text: "Ban giám hiệu nắm bắt công việc mọi lúc, mọi nơi thông qua báo cáo tổng hợp, phân tích đa chiều và thông tin tức thời. Các chỉ số quan trọng được trình bày trực quan để hỗ trợ ra quyết định nhanh, đúng và có cơ sở.", label: "24/7", detail: "nắm bắt thông tin", tone: "gold", alt: "Minh họa báo cáo và điều hành nhà trường" },
 ]
 
 const aiFeatures = [
@@ -98,11 +94,16 @@ export default function GioiThieuPage() {
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Giải pháp tổng thể cho nhà trường phổ thông</p><h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl">Quản trị liền mạch từ lớp học đến điều hành</h2><p className="mt-5 text-base leading-8 text-muted-foreground">Các phân hệ được thiết kế để dữ liệu được kết nối, quy trình được đơn giản hóa và mọi quyết định dựa trên thông tin rõ ràng.</p></div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {solutions.map(({ icon: Icon, title, text, label, detail, tone }) => (
-              <article key={title} className={`group rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg ${tone === "teal" ? "hover:border-primary/40" : tone === "coral" ? "hover:border-chart-1/60" : "hover:border-chart-3/70"}`}>
-                <div className={`flex size-12 items-center justify-center rounded-xl ${tone === "teal" ? "bg-primary/10 text-primary" : tone === "coral" ? "bg-chart-1/15 text-chart-1" : "bg-chart-3/15 text-chart-3"}`}><Icon className="size-6" aria-hidden="true" /></div>
-                <h3 className="mt-6 text-xl font-semibold text-foreground">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p>
-                <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-xs"><strong className={tone === "teal" ? "text-primary" : tone === "coral" ? "text-chart-1" : "text-chart-3"}>{label}</strong><span className="text-muted-foreground">{detail}</span></div>
+            {solutions.map(({ image, title, text, label, detail, tone, alt }) => (
+              <article key={title} className={`group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-lg ${tone === "teal" ? "hover:border-primary/40" : tone === "coral" ? "hover:border-chart-1/60" : "hover:border-chart-3/70"}`}>
+                <div className="relative aspect-[2.15] overflow-hidden bg-muted">
+                  <Image src={image} alt={alt} fill loading="lazy" placeholder="blur" blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YxZjVmOSIvPjwvc3ZnPg==" sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p>
+                  <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-xs"><strong className={tone === "teal" ? "text-primary" : tone === "coral" ? "text-chart-1" : "text-chart-3"}>{label}</strong><span className="text-muted-foreground">{detail}</span></div>
+                </div>
               </article>
             ))}
           </div>

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { BrainCircuit, MessageSquareText, Sparkles, Target, Video, BarChart3 } from "lucide-react"
+import { BrainCircuit, Sparkles, Target, BarChart3 } from "lucide-react"
 
 const channelImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pOWzB4rkfwtyPYIp94xKi9iMDTEr0f.png"
 const introImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-asHXBwt59ihwBLBqi7e5HzQw96Qqag.png"
@@ -26,10 +26,10 @@ export function SciLmsIntro() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="mb-14 max-w-3xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-teal">Giới thiệu về SCI LMS</p>
-          <h1 className="text-balance text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">Phần mềm học trực tuyến – SCI LMS cung cấp giải pháp học tập cho các nhu cầu từ xa</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">Một nền tảng đồng hành cùng nhà trường trong quá trình chuyển đổi số, kết nối hoạt động quản lý, giảng dạy, học tập và phối hợp với phụ huynh trong một trải nghiệm liền mạch.</p>
+        <div className="mx-auto mb-16 max-w-4xl text-center">
+          <p className="mb-5 text-base font-semibold uppercase tracking-[0.22em] text-teal">SCI LMS / GIỚI THIỆU</p>
+          <h1 className="text-balance text-5xl font-bold leading-[1.08] text-foreground md:text-7xl lg:text-8xl">Giới thiệu về SCI LMS</h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">Phần mềm học trực tuyến – SCI LMS cung cấp giải pháp học tập cho các nhu cầu từ xa</p>
         </div>
 
         <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
@@ -38,7 +38,8 @@ export function SciLmsIntro() {
             <div className="mt-6 space-y-5 text-base leading-8 text-muted-foreground">
               <p>SCI LMS giúp nhà trường quản lý tập trung thông tin về học sinh, giáo viên, lớp học, lịch học, điểm số và nhiều dữ liệu khác của quá trình giảng dạy. Thay vì phân tán thông tin trên nhiều công cụ, nhà trường có thể theo dõi toàn bộ hoạt động trên một nền tảng thống nhất, rõ ràng và dễ sử dụng.</p>
               <p>Trong môi trường học tập từ xa, sự kết nối giữa giáo viên, học sinh và phụ huynh càng trở nên quan trọng. SCI LMS hỗ trợ gửi thông báo, giao nhiệm vụ, cập nhật tiến độ và trao đổi hai chiều, để phụ huynh nắm bắt kịp thời tình hình học tập của con và giáo viên có thêm dữ liệu để điều chỉnh phương pháp giảng dạy.</p>
-              <p>Nền tảng được thiết kế để giảm tải công việc thủ công, tăng tính minh bạch trong vận hành và tạo ra trải nghiệm học tập linh hoạt trên cả máy tính lẫn thiết bị di động.</p>
+              <p>Nền tảng được thiết kế để giảm tải công việc thủ công, tăng tính minh bạch trong vận hành và tạo ra trải nghiệm học tập linh hoạt trên cả máy tính lẫn thiết bị di động. Mỗi quy trình từ tiếp nhận thông tin, tổ chức lớp học, giao bài, theo dõi kết quả đến trao đổi với gia đình đều được liên kết thành một dòng chảy rõ ràng.</p>
+              <p>Với SCI LMS, nhà trường có thể từng bước chuẩn hóa cách làm việc mà không làm mất đi sự gần gũi trong giáo dục. Dữ liệu được trình bày theo đúng vai trò của từng người dùng, giúp ban giám hiệu có góc nhìn tổng thể, giáo viên tập trung vào chuyên môn, học sinh học tập chủ động và phụ huynh đồng hành thuận tiện hơn.</p>
             </div>
             <ul className="mt-8 space-y-5">
               {benefits.map((benefit) => <li key={benefit} className="flex gap-4 text-sm leading-7 text-foreground"><span className="mt-1 flex size-7 shrink-0 items-center justify-center rounded-full bg-teal/15 text-teal"><span aria-hidden="true">✓</span></span><span>{benefit}</span></li>)}
@@ -60,10 +61,10 @@ export function SciLmsIntro() {
             <p className="mt-5 text-base leading-8 text-muted-foreground">SCI LMS kết nối đúng vai trò với đúng công cụ, giúp mỗi nhóm người dùng có một cách tiếp cận thuận tiện mà vẫn chia sẻ cùng một nguồn dữ liệu.</p>
             <div className="mt-8 space-y-6">
               {[
-                [Video, "Ứng dụng Web quản trị", "Dành cho nhà trường, ban giám hiệu, giáo viên và nhân viên theo dõi, xử lý công việc tập trung."],
-                [MessageSquareText, "Web và Mobile cho đội ngũ", "Giáo viên và nhân viên cập nhật hoạt động, giao tiếp nội bộ và phản hồi nhanh ngay cả khi đang di chuyển."],
-                [Sparkles, "Mobile cho phụ huynh học sinh", "Tra cứu lịch học, điểm số, thông báo và đồng hành cùng con trong từng bước học tập."],
-              ].map(([Icon, title, text]) => <div key={title as string} className="flex gap-4"><div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-teal/10 text-teal"><Icon className="size-5" aria-hidden="true" /></div><div><h3 className="font-semibold text-foreground">{title as string}</h3><p className="mt-1 text-sm leading-6 text-muted-foreground">{text as string}</p></div></div>)}
+                ["/images/channel-admin.png", "Ứng dụng Web quản trị", "Dành cho nhà trường, ban giám hiệu, giáo viên và nhân viên theo dõi, xử lý công việc tập trung."],
+                ["/images/channel-staff.png", "Web và Mobile cho đội ngũ", "Giáo viên và nhân viên cập nhật hoạt động, giao tiếp nội bộ và phản hồi nhanh ngay cả khi đang di chuyển."],
+                ["/images/channel-parent.png", "Mobile cho phụ huynh học sinh", "Tra cứu lịch học, điểm số, thông báo và đồng hành cùng con trong từng bước học tập."],
+              ].map(([image, title, text]) => <div key={title} className="flex gap-4"><div className="relative size-14 shrink-0 overflow-hidden rounded-xl bg-muted"><LazyImage src={image} alt={title} className="object-cover" /></div><div><h3 className="font-semibold text-foreground">{title}</h3><p className="mt-1 text-sm leading-6 text-muted-foreground">{text}</p></div></div>)}
             </div>
           </div>
         </div>

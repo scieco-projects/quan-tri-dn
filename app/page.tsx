@@ -5,6 +5,7 @@ import { StatsSection } from "@/components/stats/stats-section"
 import { TestimonialsSection } from "@/components/testimonials/testimonials-section"
 import { CTASection } from "@/components/cta/cta-section"
 import { Footer } from "@/components/footer/footer"
+import { AiTeachingSection, SciLmsIntro } from "@/components/sci-lms/sci-lms-sections"
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <StatsSection />
+      <SciLmsIntro />
       <FeatureSection />
+      <AiTeachingSection />
       <TestimonialsSection />
       <CTASection />
       <Footer />

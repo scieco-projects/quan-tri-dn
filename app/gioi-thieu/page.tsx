@@ -1,112 +1,121 @@
-import { Award, Lightbulb, ShieldCheck, Users } from "lucide-react"
+import Image from "next/image"
+import {
+  Bot,
+  BrainCircuit,
+  ChartNoAxesCombined,
+  Check,
+  GraduationCap,
+  Layers3,
+  MessageCircle,
+  Network,
+  ShieldCheck,
+  Sparkles,
+  UsersRound,
+} from "lucide-react"
 import { Navbar } from "@/components/navbar/navbar"
 import { Footer } from "@/components/footer/footer"
 
-const developmentDirections = [
-  {
-    icon: Lightbulb,
-    title: "Công nghệ 4.0",
-    text: "Nắm bắt các công nghệ mới như trí tuệ nhân tạo, blockchain, điện toán đám mây và IoT để tư vấn những giải pháp phù hợp, giúp tăng năng suất và khả năng cạnh tranh.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Chất lượng sản phẩm và dịch vụ",
-    text: "Không ngừng cải tiến quy trình kiểm soát chất lượng, bảo đảm giải pháp an toàn, bảo mật, dễ sử dụng và đáp ứng tốt yêu cầu nghiệp vụ.",
-  },
-  {
-    icon: Award,
-    title: "Đổi mới sáng tạo",
-    text: "Nghiên cứu công nghệ mới, thiết kế trải nghiệm thân thiện và tạo ra những tính năng hữu ích, tối ưu cho các vấn đề thực tế của khách hàng.",
-  },
+const referenceImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W5t9GYDPdoXZkKPa87rTDC3NUjEHcj.png"
+const platformImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-3EGsCRk7oaGc2eSUCppluv9N8Ta3Gh.png"
+
+const solutions = [
+  { icon: Network, title: "Quản trị dữ liệu hệ thống", text: "Quản lý tập trung người dùng, năm học, khối lớp, môn học, học sinh và giáo viên trên một nền tảng thống nhất.", label: "Toàn diện", detail: "dữ liệu nhà trường", tone: "teal" },
+  { icon: ShieldCheck, title: "Kết nối nhà trường – phụ huynh", text: "Cập nhật thông tin, thông báo và tương tác đa chiều nhanh chóng giữa ban giám hiệu, giáo viên và phụ huynh.", label: "3 bên", detail: "cùng đồng hành", tone: "coral" },
+  { icon: ChartNoAxesCombined, title: "Quản lý học tập", text: "Theo dõi thời khóa biểu, điểm số, điểm danh, nhận xét hàng ngày và quá trình rèn luyện của học sinh.", label: "360°", detail: "góc nhìn học sinh", tone: "gold" },
+  { icon: Layers3, title: "Ứng dụng đa nền tảng", text: "Web quản trị cho nhà trường và ứng dụng Mobile thuận tiện cho giáo viên, nhân viên, phụ huynh.", label: "Web + App", detail: "truy cập linh hoạt", tone: "teal" },
+  { icon: MessageCircle, title: "Tài chính và dịch vụ học sinh", text: "Quản lý học phí, tiền ăn bán trú, tuyến xe, thực đơn, câu lạc bộ và các dịch vụ hỗ trợ học sinh.", label: "Minh bạch", detail: "vận hành hiệu quả", tone: "coral" },
+  { icon: ChartNoAxesCombined, title: "Báo cáo và điều hành", text: "Ban giám hiệu nắm bắt công việc mọi lúc mọi nơi với báo cáo phân tích đa chiều và thông tin tức thời.", label: "24/7", detail: "nắm bắt thông tin", tone: "gold" },
 ]
 
-const teamStats = [
-  ["50+", "Lập trình viên Developer"],
-  ["10+", "Nhân viên kiểm thử chất lượng"],
-  ["5+", "Chuyên viên phân tích nghiệp vụ"],
-  ["3+", "Chứng chỉ quản lý dự án quốc tế"],
-  ["2+", "Chuyên viên UI/UX"],
+const aiFeatures = [
+  { icon: Bot, title: "Trợ giảng AI 24/7", text: "Giải đáp câu hỏi theo nội dung bài học, gợi ý cách làm và hỗ trợ học sinh ôn tập ngoài giờ mà không thay thế vai trò của giáo viên." },
+  { icon: BrainCircuit, title: "Cá nhân hóa lộ trình", text: "Phân tích kết quả, tốc độ và điểm còn yếu để đề xuất bài tập phù hợp cho từng học sinh, từng nhóm năng lực." },
+  { icon: Sparkles, title: "Soạn bài nhanh hơn", text: "Hỗ trợ giáo viên tạo giáo án, câu hỏi trắc nghiệm, rubric chấm điểm và nội dung tương tác từ mục tiêu bài học." },
+  { icon: ChartNoAxesCombined, title: "Phân tích & cảnh báo sớm", text: "Tổng hợp mức độ tham gia học trực tuyến, phát hiện dấu hiệu sa sút và gửi tín hiệu để nhà trường kịp thời đồng hành." },
+]
+
+const introPoints = [
+  "Số hóa và cải thiện hiệu quả quản lý, giảng dạy của cán bộ, giáo viên, nhân viên trong nhà trường",
+  "Cập nhật thông tin, tương tác đa chiều giữa nhà trường – phụ huynh – giáo viên",
+  "Giúp phụ huynh đồng hành cùng quá trình học tập, sinh hoạt của con",
 ]
 
 export default function GioiThieuPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen overflow-hidden bg-background">
       <Navbar />
 
-      <section className="border-b border-border bg-muted/40 px-6 pb-20 pt-36 lg:px-12 lg:pb-28 lg:pt-44">
+      <section className="border-b border-border bg-muted/35 px-6 pb-16 pt-32 lg:px-12 lg:pb-24 lg:pt-40">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-primary">Về Trí Nghĩa Technology</p>
-          <h1 className="max-w-4xl text-pretty text-4xl font-bold tracking-tight text-foreground md:text-6xl">
-            Đồng hành cùng doanh nghiệp trong hành trình số hóa
-          </h1>
-          <p className="mt-7 max-w-3xl text-pretty text-lg leading-8 text-muted-foreground">
-            Công ty TNHH Công nghệ, Thương mại và Dịch vụ Trí Nghĩa (TNT) được thành lập năm 2017 bởi các kỹ sư CNTT có trên 15 năm kinh nghiệm trong lĩnh vực xây dựng phần mềm.
-          </p>
+          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-primary">Giới thiệu về SCI LMS</p>
+          <h1 className="max-w-4xl text-pretty text-4xl font-bold tracking-tight text-foreground md:text-6xl">Nền tảng học tập và quản trị nhà trường toàn diện</h1>
+          <p className="mt-7 max-w-3xl text-pretty text-lg leading-8 text-muted-foreground">Phần mềm học trực tuyến – SCI LMS cung cấp giải pháp học tập cho các nhu cầu từ xa</p>
         </div>
       </section>
 
-      <section className="px-6 py-20 lg:px-12 lg:py-28">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+      <section className="px-6 py-16 lg:px-12 lg:py-24">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-              <Users className="h-7 w-7" aria-hidden="true" />
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">SCI LMS đồng hành cùng nhà trường</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl">Giới thiệu về SCI LMS</h2>
+            <div className="mt-7 space-y-5 text-base leading-8 text-muted-foreground">
+              <p>SCI LMS là nền tảng học trực tuyến được xây dựng để kết nối toàn bộ hệ sinh thái giáo dục trên một không gian số thống nhất. Nhà trường có thể tổ chức lớp học, giao bài, quản lý tiến độ và điều hành hoạt động học tập dù học sinh đang ở bất kỳ đâu.</p>
+              <p>Với giao diện thân thiện cho ban giám hiệu, giáo viên, nhân viên, học sinh và phụ huynh, SCI LMS giúp thông tin được cập nhật kịp thời, các hoạt động phối hợp trở nên minh bạch và trải nghiệm học tập được cá nhân hóa hơn.</p>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">Giới thiệu về Trí Nghĩa</h2>
+            <div className="mt-8 space-y-5">
+              {introPoints.map((point) => (
+                <div key={point} className="flex items-start gap-4">
+                  <span className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"><Check className="size-5" aria-hidden="true" /></span>
+                  <p className="text-sm leading-7 text-foreground/85">{point}</p>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="space-y-5 text-base leading-8 text-muted-foreground">
-            <p>TNT tập trung cung cấp các giải pháp số hóa, chuyển đổi số giúp doanh nghiệp và tổ chức nâng cao năng lực quản trị, cải thiện hiệu quả sản xuất và tiết kiệm chi phí vận hành.</p>
-            <p>Thế mạnh của TNT là đội ngũ kỹ sư CNTT có kinh nghiệm và chuyên môn cao, luôn lắng nghe để thấu hiểu vấn đề của khách hàng và tư vấn giải pháp công nghệ phù hợp nhất.</p>
-            <p>Nền tảng quản trị doanh nghiệp toàn diện TNM giúp rút ngắn thời gian triển khai và tiết kiệm nhiều chi phí. Bên cạnh đó, TNT cung cấp dịch vụ gia công phần mềm, xây dựng phần mềm theo yêu cầu và các giải pháp công nghệ cạnh tranh.</p>
-            <p>Các giải pháp của TNT hiện đã có mặt tại khắp Việt Nam cũng như tại Mỹ, Anh và Nhật Bản.</p>
+          <div className="relative mx-auto w-full max-w-xl pr-3 pb-3">
+            <div className="absolute inset-5 rounded-[2rem] bg-accent/25" aria-hidden="true" />
+            <Image src={referenceImage} alt="Giáo viên hướng dẫn học sinh trong lớp học" width={1180} height={720} className="relative aspect-[1.35] w-full rounded-[2rem] object-cover shadow-lg" placeholder="blur" blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy5zM0Lm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWRlZmYxIi8+PC9zdmc+" sizes="(max-width: 1024px) 100vw, 50vw" priority />
           </div>
         </div>
       </section>
 
-      <section className="bg-foreground px-6 py-20 text-background lg:px-12 lg:py-28">
+      <section className="bg-muted/35 px-6 py-16 lg:px-12 lg:py-24">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <Image src={platformImage} alt="Hệ sinh thái ứng dụng web và mobile của SCI LMS" width={1308} height={720} className="aspect-[1.55] w-full rounded-[2rem] object-cover shadow-sm" placeholder="blur" blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy5zM0Lm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWRlZmYxIi8+PC9zdmc+" loading="lazy" sizes="(max-width: 1024px) 100vw, 50vw" />
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Nền tảng tương tác đa kênh</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">Một nền tảng, nhiều vai trò, cùng một mục tiêu</h2>
+            <p className="mt-6 text-base leading-8 text-muted-foreground">SCI LMS kết nối trải nghiệm quản trị trên web với ứng dụng di động tiện lợi. Mỗi người dùng có một không gian phù hợp để làm việc, học tập và phối hợp hiệu quả.</p>
+            <div className="mt-8 space-y-4">
+              {["Ứng dụng Web quản trị dành cho Nhà trường, Quản lý, Giáo viên, Nhân viên", "Ứng dụng Web và Mobile dành cho Giáo viên, Nhân viên", "Ứng dụng Mobile dành cho Phụ huynh học sinh"].map((item) => (
+                <div key={item} className="flex items-start gap-3 text-sm leading-7 text-foreground/85"><UsersRound className="mt-1 size-5 shrink-0 text-primary" aria-hidden="true" />{item}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 lg:px-12 lg:py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary-foreground/70">Định hướng phát triển</p>
-          <h2 className="mt-4 max-w-2xl text-3xl font-bold tracking-tight md:text-5xl">Kiến tạo giải pháp công nghệ bền vững</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {developmentDirections.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="rounded-2xl border border-background/15 bg-background/5 p-7">
-                <Icon className="h-7 w-7 text-primary-foreground" aria-hidden="true" />
-                <h3 className="mt-8 text-xl font-semibold">{title}</h3>
-                <p className="mt-4 text-sm leading-7 text-background/70">{text}</p>
+          <div className="max-w-2xl"><p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Giải pháp tổng thể cho nhà trường phổ thông</p><h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl">Quản trị liền mạch từ lớp học đến điều hành</h2><p className="mt-5 text-base leading-8 text-muted-foreground">Các phân hệ được thiết kế để dữ liệu được kết nối, quy trình được đơn giản hóa và mọi quyết định dựa trên thông tin rõ ràng.</p></div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {solutions.map(({ icon: Icon, title, text, label, detail, tone }) => (
+              <article key={title} className={`group rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg ${tone === "teal" ? "hover:border-primary/40" : tone === "coral" ? "hover:border-chart-1/60" : "hover:border-chart-3/70"}`}>
+                <div className={`flex size-12 items-center justify-center rounded-xl ${tone === "teal" ? "bg-primary/10 text-primary" : tone === "coral" ? "bg-chart-1/15 text-chart-1" : "bg-chart-3/15 text-chart-3"}`}><Icon className="size-6" aria-hidden="true" /></div>
+                <h3 className="mt-6 text-xl font-semibold text-foreground">{title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p>
+                <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-xs"><strong className={tone === "teal" ? "text-primary" : tone === "coral" ? "text-chart-1" : "text-chart-3"}>{label}</strong><span className="text-muted-foreground">{detail}</span></div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-20 lg:px-12 lg:py-28">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
-          <article className="rounded-3xl border border-border bg-card p-8 shadow-sm lg:p-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Tầm nhìn</p>
-            <p className="mt-5 text-lg leading-8 text-muted-foreground">Xây dựng và phát triển TNT trở thành công ty công nghệ hàng đầu về tư vấn và cung cấp các giải pháp chuyển đổi số cho các tổ chức, doanh nghiệp tại Việt Nam và trên thế giới.</p>
-          </article>
-          <article className="rounded-3xl border border-border bg-card p-8 shadow-sm lg:p-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Sứ mệnh</p>
-            <p className="mt-5 text-lg leading-8 text-muted-foreground">Đồng hành cùng các tổ chức, doanh nghiệp thực hiện số hóa và chuyển đổi số thành công, nâng cao năng lực quản lý và cạnh tranh.</p>
-            <p className="mt-6 font-bold tracking-wide text-foreground">ĐƠN GIẢN · HIỆU QUẢ · CHUYÊN NGHIỆP · UY TÍN</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="bg-muted/40 px-6 py-20 lg:px-12 lg:py-28">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.1fr]">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Môi trường làm việc</p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-5xl">Con người là tài sản lớn nhất</h2>
-            <p className="mt-6 text-base leading-8 text-muted-foreground">TNT luôn chăm lo đời sống vật chất và tinh thần cho nhân viên, xây dựng môi trường chuyên nghiệp, văn minh để mỗi thành viên được thoải mái sáng tạo và cống hiến hết mình.</p>
+      <section className="bg-foreground px-6 py-16 text-background lg:px-12 lg:py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"><div className="max-w-3xl"><p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground/70">AI trong giảng dạy từ xa</p><h2 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">Trợ lực thông minh cho mỗi giờ học</h2></div><p className="max-w-md text-sm leading-7 text-background/70">Đề xuất thiết kế: một “AI learning studio” nền tối, dùng các thẻ chức năng sáng rõ để tạo cảm giác tập trung, tin cậy và hiện đại.</p></div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {aiFeatures.map(({ icon: Icon, title, text }) => <article key={title} className="rounded-2xl border border-background/15 bg-background/5 p-6"><div className="flex size-11 items-center justify-center rounded-xl bg-primary/15 text-primary-foreground"><Icon className="size-5" aria-hidden="true" /></div><h3 className="mt-6 text-lg font-semibold">{title}</h3><p className="mt-3 text-sm leading-7 text-background/70">{text}</p></article>)}
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {teamStats.map(([value, label]) => (
-              <div key={label} className="rounded-2xl border border-border bg-card p-6">
-                <p className="text-3xl font-bold text-primary">{value}</p>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">{label}</p>
-              </div>
-            ))}
-          </div>
+          <div className="mt-10 flex items-center gap-3 rounded-2xl border border-primary/25 bg-primary/10 p-5 text-sm leading-7 text-background/80"><GraduationCap className="size-6 shrink-0 text-primary-foreground" aria-hidden="true" /><span>AI hỗ trợ giáo viên và nhà trường ra quyết định tốt hơn, đồng thời luôn đặt quyền riêng tư, sự an toàn và vai trò chủ động của con người làm trung tâm.</span></div>
         </div>
       </section>
 
